@@ -4,7 +4,7 @@ class User < ApplicationRecord
   include Settings::Extend
 
   devise :registerable, :recoverable,
-         :rememberable, :trackable, :validatable, :confirmable,
+         :rememberable, :trackable, :validatable,
          :two_factor_authenticatable, :two_factor_backupable,
          otp_secret_encryption_key: ENV['OTP_SECRET'],
          otp_number_of_backup_codes: 10

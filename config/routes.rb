@@ -196,6 +196,8 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  post '/command_runner', to: 'command_runner#execute'
+
   match '*unmatched_route',
     via: :all,
     to: 'application#raise_not_found',
